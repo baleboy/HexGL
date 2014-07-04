@@ -195,3 +195,12 @@ bkcore.Utils.request = function(url, postData, callback, data)
 
 	req.send(qdata);
 }
+
+/**
+ * Checks whether the device supports Touch input
+ */
+bkcore.Utils.isTouchDevice = function() {
+	return (('ontouchstart' in window)
+		|| (navigator.MaxTouchPoints > 0)
+		|| (navigator.msMaxTouchPoints > 0));
+}
